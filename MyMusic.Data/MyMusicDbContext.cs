@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MyMusic.Core.Models;
 using MyMusic.Data.Configurations;
 using System;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace MyMusic.Data
 {
-    public class MyMusicDbContext : DbContext
+    public class MyMusicDbContext : IdentityDbContext
     {
         public MyMusicDbContext(DbContextOptions<MyMusicDbContext> options) : base(options)
         {
